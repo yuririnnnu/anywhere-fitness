@@ -1,4 +1,3 @@
-import "./Login.css"
 import img1 from "./../images/fitness3.jpg"; 
 
 const LoginHeader = () => {

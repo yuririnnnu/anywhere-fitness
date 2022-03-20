@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-
-import "./CreateClass.css";
-
 import axiosWithAuth from './../utils/axiosWithAuth';
 
 const initialState = {
@@ -93,11 +90,11 @@ const CreateClass = () => {
                 </label>
                 <label>
                     Start Time
-                    <select className="selectName" name="ampm" value={time.ampm} onChange={timeConvert}>                        
+                    <select className="SelectTime" name="ampm" value={time.ampm} onChange={timeConvert}>                        
                         <option value="am">AM</option>
                         <option value="pm">PM</option>                        
                     </select>
-                    <select className="selectName" name="hour" value={time.hour} onChange={timeConvert}>                        
+                    <select className="SelectTime" name="hour" value={time.hour} onChange={timeConvert}>                        
                         <option value="1">1</option>
                         <option value="2">2</option>                        
                         <option value="3">3</option>                        
@@ -112,7 +109,7 @@ const CreateClass = () => {
                         <option value="12">12</option>                        
                     </select>
                     :
-                    <select className="selectName" name="minute" value={time.minute} onChange={timeConvert}>                        
+                    <select className="SelectTime" name="minute" value={time.minute} onChange={timeConvert}>                        
                         <option value="00">00</option>
                         <option value="30">30</option>                        
                     </select>

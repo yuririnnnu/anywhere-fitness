@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios'; 
 import LoginHeader from './LoginHeader'
-import "./Login.css";
 
 const Login = () => {
     const push = useNavigate(); 
     const [cred, setCred] = useState({
-        username: '', 
-        password: ''
+        username: "", 
+        password: ""
     }); 
 
     const handleChange = (e) => {
@@ -42,7 +41,6 @@ const Login = () => {
                             <label htmlFor="username">Username:</label>
                             <input onChange={handleChange} name="username" id="username" />
                         </div>
-
                         <div>
                             <label htmlFor="password">Password:</label>
                             <input onChange={handleChange} name="password" type="password" id="password" />

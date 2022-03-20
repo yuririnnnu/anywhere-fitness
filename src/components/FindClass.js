@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axiosWithAuth from './../utils/axiosWithAuth';
 import FoundClass from './FoundClass';
-import "./FindClass.css";
 
 const FindClass = () => {
     const [ state, setState ] = useState({        

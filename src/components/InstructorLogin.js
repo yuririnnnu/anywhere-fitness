@@ -1,14 +1,13 @@
 import React, { useState } from 'react'; 
 import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios'; 
-import "./Login.css";
 import LoginHeader from './LoginHeader';
 
 const InstructorLogin = () => {
     const push = useNavigate(); 
     const [cred, setCred] = useState({
-        username: '', 
-        password: ''
+        username: "", 
+        password: ""
     }); 
 
     const handleChange = (e) => {

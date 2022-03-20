@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./SignUp.css";
 
 const SignUp = () => {
     const [ state, setState ] = useState({
@@ -37,45 +36,46 @@ const SignUp = () => {
     //     })
     // }
 
-    return (<div className="ComponentContainer">
-    <div className="ModalContainer">
-        <div className="sign-up">
-            <h1>Sign Up!</h1>
-            <form className="Form" onSubmit={handleSubmit}>
-                <label>
-                    User Name
-                    <input
-                    name="username"
-                    type="text"
-                    onChange={handleChange}
-                    value={state.username}
-                    />
-                </label>
-                <label>
-                    Password
-                    <input
-                    name="password"
-                    type="password"
-                    onChange={handleChange}
-                    value={state.password}
-                    />
-                </label>
-                {/* <label>
-                    Sign up as Instructor?
-                    <select value={state.role} onChange={(e)=> handleInstructor(e)}>
-                        <option value="" >Select</option>
-                        <option name="instructor" value="instructor">Instructor</option>
-                        <option name="client" value="client">Not Instructor</option>
-                    </select>
-                </label> */}
-                <button>Sign Up</button>
-                {
-                    message.message ? (<div><h2>{message.message}</h2></div>) : <div></div>
-                }
-            </form>                
+    return (
+    <div className="ComponentContainer">
+        <div className="ModalContainer">
+            <div className="sign-up">
+                <h1>Sign Up!</h1>
+                <form className="Form" onSubmit={handleSubmit}>
+                    <label>
+                        User Name
+                        <input
+                        name="username"
+                        type="text"
+                        onChange={handleChange}
+                        value={state.username}
+                        />
+                    </label>
+                    <label>
+                        Password
+                        <input
+                        name="password"
+                        type="password"
+                        onChange={handleChange}
+                        value={state.password}
+                        />
+                    </label>
+                    {/* <label>
+                        Sign up as Instructor?
+                        <select value={state.role} onChange={(e)=> handleInstructor(e)}>
+                            <option value="" >Select</option>
+                            <option name="instructor" value="instructor">Instructor</option>
+                            <option name="client" value="client">Not Instructor</option>
+                        </select>
+                    </label> */}
+                    <button>Sign Up</button>
+                    {
+                        message.message ? (<div><h2>{message.message}</h2></div>) : <div></div>
+                    }
+                </form>                
+            </div>
         </div>
     </div>
-</div>
     )
 }
 export default SignUp;

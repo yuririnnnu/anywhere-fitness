@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 
 const FoundClass = (props) => {
     const { foundClass, searchedClass } = props;
@@ -31,8 +30,9 @@ const FoundClass = (props) => {
         <div className="found-class">
             {
                 state.map(s => {
-                    return (<ComponentContainer>
-                        <ModalContainer>                        
+                    return (
+                    <div className="ComponentContainer">
+                        <div className="ModalContainer">                        
                             <div>
                                 <h2>{s.class_name}</h2>
                                 <h4>Type: {s.class_type}</h4>
@@ -41,8 +41,8 @@ const FoundClass = (props) => {
                                 <h4>Level: {s.class_intensity_level}</h4>
                                 <h4>Attendees: {s.total_clients} people (Max: {s.max_class_size} people)</h4>
                             </div>                        
-                        </ModalContainer>
-                    </ComponentContainer>
+                        </div>
+                    </div>
                     )
                 })
             }
@@ -50,17 +50,3 @@ const FoundClass = (props) => {
     )
 }
 export default FoundClass;
-
-const ComponentContainer = styled.div`
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    display:flex;
-`
-
-const ModalContainer = styled.div`
-    width: 500px;
-    background: white;
-    padding: 2rem;
-    text-align: center;
-`
