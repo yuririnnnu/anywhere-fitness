@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #274c77; 
+  background: #141D37; 
 
 }
 
@@ -17,20 +17,33 @@ code {
   display: flex;
   flex-direction: row;
 }
+.header-left .name{
+  color: white;
+  font-family: 'Play', sans-serif;
+  font-size: 1rem;
+}
 .header-left, .header-right {
   width: 50%;
+  border: 5px solid red;
 }
 .header-left {
+  display: flex;
+  flex-direction: row;
   justify-content: left;    
 }
 .header-right {
-  justify-content: right;    
+  border: 5px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
 }
 .navigation {
+  border: 5px solid red;
   display: flex;
   flex-direction: row;
   justify-content: right;  
-  margin: 0 15px;
+  align-items: center;
+  font-size:0.8rem
 }
 .navigation h2{
   color: white;
