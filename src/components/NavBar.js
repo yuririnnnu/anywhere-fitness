@@ -1,39 +1,53 @@
 import React from 'react'; 
-import { Link } from 'react-router-dom'; 
-import styled from 'styled-components';
+import img from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
-
-    const StyledLink = styled(Link)`
-        color: white; 
-        text-decoration: none; 
-        cursor: pointer; 
-        font-weight: bold; 
-        opacity: 1;
-        &:hover {
-            background-color: lightblue; 
-        }
-    `;
-
-
     return (
-        <div style={{
-            display: "flex", 
-            flexDirection: "row", 
-            height: "5em", 
-            margin: "1em", 
-            backgroundColor: "#274c77",
-            justifyContent: "space-around", 
-            alignItems: "center", 
-            textColor: "white",
-        }}>
-        <StyledLink to="login">Login</StyledLink>
-        <StyledLink to="instructorLogin">Instructor Login</StyledLink>
-        <StyledLink to="signup">Sign Up</StyledLink>
-        <StyledLink to="client">Find a class</StyledLink>
-        <StyledLink to="createclass">Create Class</StyledLink>
-        <StyledLink to="instructor">Instructor</StyledLink>
-        <StyledLink to="logout">Logout</StyledLink>
+        <div className="header">
+            <div className="logo">
+                <img 
+                src={img} 
+                width="100" height="100"
+                alt="logo of anywhere fitness"
+                />
+            </div>
+            <div>
+                <h1>ANYWHERE FITNESS</h1>
+            </div>
+            <nav className="navigation">
+                <Link to='/'>
+                    <h2>Home</h2>
+                </Link>
+                <Link to='login'>
+                    <h2>login</h2>
+                </Link>
+
+                <Link to='instructorLogin'>
+                    <h2>instructorLogin</h2>
+                </Link>
+
+                <Link to='signup'>
+                    <h2>signup</h2>
+                </Link>
+
+                <Link to='client'>
+                    <h2>client</h2>
+                </Link>
+
+                <Link to='createClass'>
+                    <h2>createClass</h2>
+                </Link>
+
+                <Link to='instructor'>
+                    <h2>instructor</h2>
+                </Link>
+
+                <Link to='logout'>
+                    <h2>logout</h2>
+                </Link>
+
+            </nav>
         </div>
     )
 }

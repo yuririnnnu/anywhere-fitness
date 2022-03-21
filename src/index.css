@@ -6,13 +6,41 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #274c77; 
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.header {
+  display: flex;
+  flex-direction: row;
+}
+.header-left, .header-right {
+  width: 50%;
+}
+.header-left {
+  justify-content: left;    
+}
+.header-right {
+  justify-content: right;    
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;  
+  margin: 0 15px;
+}
+.navigation h2{
+  color: white;
+  padding: 0 5px;
+  text-decoration: none; 
+  opacity: 1;
+}
+.navigation h2:hover {
+  color: lightblue; 
+}
 .title h1{
   display: flex; 
   align-items: center;
@@ -67,16 +95,21 @@ input{
   font-size: 1rem;
   padding: 1rem 0;
   width:100%;
+  border-radius: 10px;
+  border: 1px black solid;
 }
 select{
   font-size: 1rem;
   padding: 1rem 0;
   width:100%;
+  border-radius: 10px;
+  border: 1px black solid;
 }
 button{
   padding:1rem;
   width: 100%;
   margin-top: 1em;
+  border-radius: 10px;
 }
 .SelectTime{
   font-size: 1rem;
@@ -85,11 +118,62 @@ button{
   margin: 0 0.5em;
 }
 
-.contact {
-  color: white; 
+/* For footer */
+footer{
   font-family: 'Wire One', sans-serif; 
-  padding: 5px;
+  font-weight: bold;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:#fff;
+  border: 5px solid yellow;
+  padding: 0 10%;
+}
+footer h2{
+  color:#fff;
+  width:100%;
+  text-align: center;
+}
+footer a, footer h3{
+  text-align: center;
+  color:#fff;
+}
+.footerContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  width: 100%;
+  border: 5px solid white;
+}
+.right, .left{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid red;
+}
+.left div.info{
+  width:60%;
+  line-height:2.5;
+}
+.right form {
+  width: 100%;
+}
+input .message {
+  height: 30px;
+}
+
+.bottom{
+  width:100%;
+  text-align:right;
+}
+.bottom p{
+  color:#fff;
+  margin-right:5%;
+  margin-top:2%;
+}
+@media (max-width: 500px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    }
 }

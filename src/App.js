@@ -8,7 +8,7 @@ import CreateClass from "./components/CreateClass";
 import InstructorHome from "./components/InstructorHome";
 import InstructorLogin from "./components/InstructorLogin";
 import FindClass from "./components/FindClass";
-import {Email, PhoneEnabled, Home } from "@material-ui/icons";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,22 +24,7 @@ function App() {
           <Route path="instructor" element={<InstructorHome/>}/>
           <Route path="logout" element={<Logout />} />
         </Routes>          
-        <div className="contact">
-          <div className="itemContainer">
-            <Email className="icon"/>
-            <h3>Email: 1234@email.com</h3>
-          </div>
-
-          <div className="itemContainer">
-            <PhoneEnabled className="icon"/>
-            <h3>Phone: 123-456-7890</h3>
-          </div>
-
-          <div className="itemContainer">
-            <Home className="icon"/>
-            <h3>Address: 1234 SomeWhere Road #1004 Austin, TX 78744 USA</h3>
-        </div>
-      </div>
+      <Footer />
     </BrowserRouter>
   );
 }
