@@ -23,20 +23,27 @@ const slideImages = [
 const LoginHeader = () => {
    
     return (
-        <div className="slide">
-            <div className="slide-container">
-                <Slide>
-                {slideImages.map((slideImage, index)=> (
-                    <div className="each-slide" key={index}>
-                        <div className="each-photo" >
-                            <img src={slideImage.url} />
-                            <span>{slideImage.caption}</span>
+        <div>
+
+            <div className="slide">
+                <div className="slide-container">
+                    <Slide>
+                    {slideImages.map((slideImage, index)=> (
+                        <div className="each-slide" key={index}>
+                            <div className="each-photo" >
+                                <img src={slideImage.url} />
+                                <span>{slideImage.caption}</span>
+                            </div>
                         </div>
-                    </div>
-                ))} 
-                </Slide>
+                    ))} 
+                    </Slide>
+                </div>
             </div>
+            {/* <div className="title">
+                <h1>Welcome To AnyWhere Fitness! <br/> Login below to schedule a class!</h1>
+            </div>  */}
         </div>
+
     )
 }
     
