@@ -8,7 +8,6 @@ body {
   background: #141D37; 
 
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,46 +17,71 @@ code {
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-.header-left .name{
+.header-right .name{
   color: white;
   font-family: 'Play', sans-serif;
   font-size: 1rem;
 }
-.header-left, .header-right {
-  width: 50%;
-}
-.header-left {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;    
-}
 .header-right {
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;  
+  align-items: right;
 }
-.menu {
-  color: white;
-  margin-right: 5px;
-  text-align: right;
-}
-.navigation {
-  background-color:#0C4BA0;
+.header-left {
   display: flex;
-  flex-direction: column;
-  justify-content: right;  
-  align-items: center;
-  font-size:0.8rem
+  justify-content: center;  
+  align-items: left;
 }
-.navigation h2{
+.nav-text {
   color: white;
-  padding: 0 5px;
-  text-decoration: none; 
-  opacity: 1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8 0 8 16px;
+  list-style: none;
+  height: 60px;
 }
-.navigation h2:hover {
-  color: lightblue; 
+.nav-text a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+.nav-text a:hover {
+  background-color: lightblue;
+}
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+.bm-burger-bars {
+  background: white;
+}
+.bm-burger-bars-hover {
+  background: #2583A5;
+}
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+.bm-cross {
+  background: #bdc3c7;
+}
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
 }
 
 /* Header photo and subtitle */
